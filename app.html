@@ -1,0 +1,820 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Camelids & Code - The Awesome Fusion</title>
+    <meta
+      name="description"
+      content="Discover the amazing world where llamas, vicuñas, and alpacas meet web development - fluffy, functional, and fantastic!"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/default.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <!-- Header Navigation -->
+    <header>
+      <nav class="container">
+        <a href="#home" class="logo"> 🦙 Camelids & Code </a>
+        <div>
+          <a href="#home" class="active" data-page="home">Home</a>
+          <a href="#about" data-page="about">About D.I.</a>
+          <a href="#presentations" data-page="presentations">Presentations</a>
+          <a href="#media" data-page="media">Media</a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="nav-toggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Dynamic Content Container -->
+    <main>
+      <!-- Content will be loaded here dynamically -->
+    </main>
+
+    <!-- Footer (always visible) -->
+    <footer id="contact">
+      <div class="container">
+        <div>
+          <h4>Camelids & Code</h4>
+          <p>
+            Where the world of fluffy camelids meets cutting-edge web
+            development - creating something absolutely magical! 🦙✨
+          </p>
+          <div class="social-links">
+            <a href="mailto:divonbriesen@gmail.com"
+              ><i class="fas fa-envelope"></i
+            ></a>
+            <a href="https://github.com/divonbriesen"
+              ><i class="fab fa-github"></i
+            ></a>
+            <a href="https://www.linkedin.com/in/divonbriesen/"
+              ><i class="fab fa-linkedin"></i
+            ></a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home" data-page="home">Home</a></li>
+            <li><a href="#about" data-page="about">About D.I.</a></li>
+            <li>
+              <a href="#presentations" data-page="presentations"
+                >Presentations</a
+              >
+            </li>
+            <li><a href="#media" data-page="media">Media</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Camelid Facts</h4>
+          <ul>
+            <li><a href="#home">Llama Logic</a></li>
+            <li><a href="#home">Vicuña Variables</a></li>
+            <li><a href="#home">Alpaca Algorithms</a></li>
+            <li><a href="#contact">Dev Community</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Info</h4>
+          <p>📧 divonbriesen@gmail.com</p>
+          <p>🦙 Camelid Code Sanctuary</p>
+          <p>💻 Full-Stack Fluffiness</p>
+        </div>
+        </div>
+        <div>
+          <div>
+            <p>
+              &copy; 2026 Camelids & Code and D.I. von Briesen. All rights
+              reserved.
+            </p>
+            <a href="#">Privacy Policy</a> •
+            <a href="#">Terms of Service</a> • <a href="#">Cookie Policy</a> •
+            <a href="#">Camelid Care Guidelines</a>
+            <p class="disclaimer">
+              This website celebrates both the serious work of educational
+              technology and the playful spirit of innovation. No actual
+              camelids were involved in the development process, though their
+              spiritual guidance remains invaluable. All professional
+              credentials and achievements are authentic.
+            </p>
+            <p
+              class="disclaimer"
+              style="
+                margin-top: 1rem;
+                font-weight: 600;
+                color: var(--secondary-color);
+              "
+            >
+              D.I. generated this page in early 2026 as an experiment in how
+              quickly he could throw together something with AI. Most of the
+              content is accurate and valid - but not all of it. If you're
+              interested, text him.
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Page content data
+      const pageContent = {
+        home: `
+          <!-- Hero Section -->
+          <section class="hero">
+            <div class="container">
+              <h1>
+                Welcome to <span class="gradient-text">Camelids & Code</span>
+              </h1>
+              <p>
+                Where the fluffy world of llamas, vicuñas, and alpacas meets the
+                cutting-edge realm of web development. It's functional, it's
+                fantastic, and it's absolutely fluffy! 🦙✨
+              </p>
+              <div class="hero-buttons">
+                <a href="#about" class="btn btn-primary" data-page="about">Meet the Developer</a>
+                <a href="#media" class="btn btn-secondary" data-page="media">View Media</a>
+                <a href="#features" class="btn btn-secondary">Explore Features</a>
+              </div>
+              <div class="floating-camelids">
+                <span style="animation-delay: 0s">🦙</span>
+                <span style="animation-delay: 1s">🦌</span>
+                <span style="animation-delay: 2s">🐪</span>
+              </div>
+            </div>
+          </section>
+
+          <!-- Features Section -->
+          <section class="section features" id="features">
+            <div class="container">
+              <h2>Why Camelids & Code?</h2>
+              <div class="features-grid">
+                <div class="feature">
+                  🦙
+                  <h4>Llama Logic</h4>
+                  <p>
+                    Just like llamas are sure-footed on mountain trails, our code
+                    is reliable and stable across all platforms. No drama, just
+                    llama!
+                  </p>
+                </div>
+                <div class="feature">
+                  🌟
+                  <h4>Vicuña Variables</h4>
+                  <p>
+                    Vicuñas produce the finest wool in the world. Similarly, we
+                    craft the finest, most elegant code solutions for your
+                    projects.
+                  </p>
+                </div>
+                <div class="feature">
+                  💻
+                  <h4>Alpaca Algorithms</h4>
+                  <p>
+                    Alpacas are gentle, intelligent, and efficient. Our algorithms
+                    share these same qualities - smart, kind to your system
+                    resources, and incredibly effective.
+                  </p>
+                </div>
+                <div class="feature">
+                  <div class="feature-icon">🚀</div>
+                  <h4>Performance That Scales</h4>
+                  <p>
+                    Like camelids thriving from sea level to 4,000m altitude, our
+                    solutions perform excellently across all environments and scales.
+                  </p>
+                </div>
+                <div class="feature">
+                  <div class="feature-icon">🎯</div>
+                  <h4>Precision & Reliability</h4>
+                  <p>
+                    Camelids have incredible spatial memory and navigation skills.
+                    Our code navigates complex problems with the same precision.
+                  </p>
+                </div>
+                <div class="feature">
+                  <div class="feature-icon">🌱</div>
+                  <h4>Sustainable Solutions</h4>
+                  <p>
+                    Camelids are eco-friendly grazers that improve their
+                    environment. Our code solutions are clean, efficient, and
+                    environmentally conscious.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Interactive Demo Section -->
+          <section class="section">
+            <div class="container">
+              <h2>Interactive Llama Counter</h2>
+              <div class="demo-container">
+                <div class="counter-display">
+                  <span class="counter-emoji">🦙</span>
+                  <span class="counter-number" id="llamaCount">0</span>
+                  <span class="counter-label">Happy Llamas</span>
+                </div>
+                <div class="demo-buttons">
+                  <button class="btn btn-primary" onclick="addLlama()">Add Llama</button>
+                  <button class="btn btn-secondary" onclick="removeLlama()">
+                    Remove Llama
+                  </button>
+                  <button class="btn btn-accent" onclick="llamaParty()">
+                    Llama Party! 🎉
+                  </button>
+                </div>
+                <div class="code-example">
+                  <h4>The Code Behind the Magic:</h4>
+                  <pre><code>function addLlama() {
+            llamaCount++;
+            updateDisplay();
+            if (llamaCount === 10) {
+              showSpecialMessage("You've reached peak llama!");
+            }
+          }</code></pre>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- CTA Section -->
+          <section class="section cta-section">
+            <div class="container">
+              <h2>Ready to Join the Herd?</h2>
+              <p>
+                Let's create something amazing together - where your project meets our
+                camelid-inspired excellence!
+              </p>
+              <a href="#about" class="btn btn-primary btn-large" data-page="about">
+                Meet D.I. von Briesen
+              </a>
+            </div>
+          </section>
+        `,
+
+        about: `
+          <!-- Profile Hero Section -->
+          <section class="profile-hero" id="profile">
+            <div class="container">
+              <div class="profile-content">
+                <img
+                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&h=300&fit=crop&crop=face&auto=format&q=80"
+                  alt="D.I. von Briesen - Professional Profile Photo"
+                  class="profile-image"
+                  style="object-fit: cover;"
+                />
+                <div class="profile-info">
+                  <h1>D.I. von Briesen</h1>
+                  <p class="title">
+                    Educational Technologist & Innovation Consultant
+                  </p>
+                  <p class="subtitle">
+                    Technology in Education | Open Source Advocate | Sustainability
+                    Advocate
+                  </p>
+
+                  <div class="contact-info">
+                    <div class="contact-item">
+                      <i class="fas fa-envelope"></i>
+                      <span>divonbriesen@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                      <i class="fas fa-phone"></i>
+                      <span>(704) 293-3399</span>
+                    </div>
+                    <div class="contact-item">
+                      <i class="fas fa-map-marker-alt"></i>
+                      <span>Charlotte, NC</span>
+                    </div>
+                    <div class="contact-item">
+                      <i class="fas fa-building"></i>
+                      <span>Gmail Communications</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- About Section -->
+          <section class="section">
+            <div class="container">
+              <h2 class="section-title">Academic Biography</h2>
+              <div style="max-width: 800px; margin: 0 auto; text-align: center">
+                <p
+                  style="
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    color: var(--text-light);
+                    margin-bottom: 2rem;
+                  "
+                >
+                  D.I. von Briesen is an Information Technology faculty member at Central Piedmont Community College
+                  in Charlotte, NC, with over two decades of experience in educational technology.
+                  Since joining CPCC as full-time faculty in August 2001, he has specialized in Web
+                  Technologies and Introduction to Computers while serving in various leadership roles
+                  including Program Chair for Web Technologies, Database Administration, and Software Development.
+                </p>
+                <p
+                  style="
+                    font-size: 1.1rem;
+                    line-height: 1.8;
+                    color: var(--text-light);
+                  "
+                >
+                  Through Gmail Communications, D.I. provides consulting services in educational technology,
+                  course management systems, and web development. He is renowned for his extensive conference
+                  presentations, having delivered workshops at hundreds of venues nationwide on topics ranging
+                  from Moodle and web development to innovative teaching methods and emerging technologies like
+                  Second Life and sustainable living through his innovative EcoBox project. Featured in 
+                  <a href="https://www.charlottemagazine.com/an-untrapped-mind-d-i-von-briesen/" target="_blank">Charlotte Magazine</a>
+                  and delivered <a href="https://www.youtube.com/watch?v=4dnlcO1tZAg" target="_blank">TEDx talks</a> on sustainability and innovation.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Education Section -->
+          <section class="section features" id="education">
+            <div class="container">
+              <h2 class="section-title">Educational Background</h2>
+
+              <div class="academic-grid">
+                <div class="academic-card">
+                  <h4>Master of Science (MS)</h4>
+                  <div class="institution">University of Virginia</div>
+                  <div class="year">1997</div>
+                  <p>
+                    Management Information Systems, Charlottesville, VA (3.9 GPA).
+                    Thesis project created web-cardiology tutorial prototype linked to
+                    Cybercash payment system on OWS/Oracle/NT platform. Beta Gamma Sigma,
+                    first in class.
+                  </p>
+                </div>
+
+                <div class="academic-card">
+                  <h4>Bachelor of Science (BS)</h4>
+                  <div class="institution">Georgetown University</div>
+                  <div class="year">1992</div>
+                  <p>
+                    International Business-Languages & Linguistics, Washington, DC (3.3 GPA).
+                    Strong foundation in international business principles combined with
+                    linguistic studies, providing valuable cross-cultural communication skills.
+                  </p>
+                </div>
+
+                <div class="academic-card">
+                  <h4>Professional Training</h4>
+                  <div class="institution">PricewaterhouseCoopers</div>
+                  <div class="year">1997</div>
+                  <p>
+                    Management Consulting Services Information Technology Individual Study (MITIS) -
+                    Four months of intensive full-time consulting and software development training,
+                    approximately equivalent to a Master's degree (~650 hours).
+                  </p>
+                </div>
+
+                <div class="academic-card">
+                  <h4>Professional Certifications</h4>
+                  <div class="institution">Various Organizations</div>
+                  <div class="year">2000-Present</div>
+                  <p>
+                    Certified Internet Webmaster (CIW) - E-Commerce Specialist, Web Design Professional.
+                    World Organization of Webmasters (WOW) Associate. Cisco Academy certified instructor
+                    for Web Design and Java Programming curricula.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Philosophy Section -->
+          <section class="section cta-section">
+            <div class="container">
+              <h2>Educational Philosophy</h2>
+              <p
+                style="
+                  max-width: 800px;
+                  margin: 0 auto;
+                  font-size: 1.1rem;
+                  line-height: 1.7;
+                "
+              >
+                "Technology in education should serve to enhance learning, not replace good teaching.
+                My focus is on bridging the gap between technology capabilities and practical educational
+                applications, helping students develop both technical skills and critical thinking abilities
+                they need for success in our rapidly evolving digital world."
+              </p>
+              <p style="margin-top: 1.5rem; font-style: italic; opacity: 0.9">
+                - D.I. von Briesen
+              </p>
+            </div>
+          </section>
+        `,
+
+        presentations: `
+          <!-- Hero Section -->
+          <section class="hero">
+            <div class="container">
+              <div class="hero-content">
+                <div class="hero-text">
+                  <h1 class="hero-title">
+                    Presentations & <span class="gradient-text">Workshops</span>
+                  </h1>
+                  <p class="hero-subtitle">
+                    Over 200+ conference presentations and workshops delivered nationwide,
+                    covering educational technology, web development, and innovative teaching methods.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Stats Section -->
+          <section class="section">
+            <div class="container">
+              <div class="stats-grid">
+                <div class="stat-card">
+                  <div class="stat-number">200+</div>
+                  <div class="stat-label">Conference Presentations</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">50+</div>
+                  <div class="stat-label">Workshop Topics</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">20+</div>
+                  <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">1000+</div>
+                  <div class="stat-label">Educators Trained</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Quote Section -->
+          <section class="section cta-section">
+            <div class="container">
+              <h2>"Bridging the gap between technology and education"</h2>
+              <p>
+                My presentations focus on practical applications of educational technology,
+                helping educators transform their teaching through innovative tools and methods.
+              </p>
+              <p style="margin-top: 1.5rem; font-style: italic; opacity: 0.9">
+                - D.I. von Briesen
+              </p>
+            </div>
+          </section>
+
+          <!-- Booking Section -->
+          <section class="section">
+            <div class="container">
+              <h2>Book D.I. for Your Event</h2>
+              <div class="booking-content">
+                <div class="booking-info">
+                  <h3>Available Presentation Formats</h3>
+                  <ul class="booking-list">
+                    <li>Keynote Presentations (45-60 minutes)</li>
+                    <li>Interactive Workshops (2-4 hours)</li>
+                    <li>Multi-day Training Sessions</li>
+                    <li>Panel Discussions</li>
+                    <li>Webinar Sessions</li>
+                  </ul>
+                </div>
+                <div class="booking-cta">
+                  <a href="mailto:divonbriesen@gmail.com" class="cta-button">
+                    <i class="fas fa-envelope"></i> Email: divonbriesen@gmail.com
+                  </a>
+                  <p class="booking-note">
+                    Contact for availability, pricing, and custom workshop development.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+        `,
+
+        media: `
+          <!-- Media Hero Section -->
+          <section class="hero">
+            <div class="container">
+              <div class="hero-content">
+                <div class="hero-text">
+                  <h1 class="hero-title">
+                    Media & <span class="gradient-text">Publications</span>
+                  </h1>
+                  <p class="hero-subtitle">
+                    Featured articles, TEDx presentations, and media appearances showcasing
+                    innovation in educational technology and sustainable living.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Featured Articles Section -->
+          <section class="section">
+            <div class="container">
+              <h2 class="section-title">Featured Publications</h2>
+              <div class="cards-grid">
+                <div class="card">
+                  <span class="card-icon">📰</span>
+                  <h3>Charlotte Magazine Profile</h3>
+                  <p><strong>"An Untrapped Mind: D.I. von Briesen"</strong></p>
+                  <p>
+                    In-depth profile exploring D.I.'s innovative approaches to educational 
+                    technology, sustainable living projects, and the groundbreaking EcoBox initiative.
+                    The article highlights his unique perspective on bridging technology and education.
+                  </p>
+                  <div class="presentation-meta">
+                    <span><i class="fas fa-calendar"></i> Featured Article</span>
+                    <span><i class="fas fa-building"></i> Charlotte Magazine</span>
+                  </div>
+                  <a href="https://www.charlottemagazine.com/an-untrapped-mind-d-i-von-briesen/" 
+                     target="_blank" class="cta-button" style="margin-top: 1rem;">Read Full Article</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- TEDx Presentations Section -->
+          <section class="section features">
+            <div class="container">
+              <h2 class="section-title">TEDx Presentations</h2>
+              <div class="features-grid">
+                <div class="feature">
+                  🏗️
+                  <h4>EcoBox: Sustainable Living Innovation</h4>
+                  <p>
+                    TEDx presentation showcasing the innovative EcoBox project - an off-grid dwelling 
+                    created from a shipping container featuring solar power, rainwater catchment, and 
+                    sustainable technologies for educational demonstration.
+                  </p>
+                  <div class="presentation-meta">
+                    <span><i class="fas fa-play-circle"></i> TEDx Talk</span>
+                    <span><i class="fas fa-leaf"></i> Sustainability</span>
+                  </div>
+                  <a href="https://www.youtube.com/watch?v=4dnlcO1tZAg" 
+                     target="_blank" class="btn btn-primary" style="margin-top: 1rem;">Watch on YouTube</a>
+                </div>
+
+                <div class="feature">
+                  🎓
+                  <h4>Educational Technology Innovation</h4>
+                  <p>
+                    TEDx Hickory presentation exploring innovative approaches to educational technology 
+                    integration, highlighting practical applications and future possibilities for 
+                    technology-enhanced learning environments.
+                  </p>
+                  <div class="presentation-meta">
+                    <span><i class="fas fa-play-circle"></i> TEDx Hickory</span>
+                    <span><i class="fas fa-graduation-cap"></i> EdTech</span>
+                  </div>
+                  <a href="https://www.youtube.com/watch?v=rEyFNgoln0s" 
+                     target="_blank" class="btn btn-primary" style="margin-top: 1rem;">Watch on YouTube</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Stats Section -->
+          <section class="section">
+            <div class="container">
+              <div class="stats-grid">
+                <div class="stat-card">
+                  <div class="stat-number">2</div>
+                  <div class="stat-label">TEDx Presentations</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">1</div>
+                  <div class="stat-label">Magazine Features</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">200+</div>
+                  <div class="stat-label">Conference Talks</div>
+                </div>
+                <div class="stat-card">
+                  <div class="stat-number">20+</div>
+                  <div class="stat-label">Years in Media</div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Related Content Section -->
+          <section class="section cta-section">
+            <div class="container">
+              <h2>Explore More Content</h2>
+              <p>
+                Discover additional presentations, workshops, and educational content 
+                from D.I.'s extensive portfolio of work in educational technology.
+              </p>
+              <div class="hero-buttons">
+                <a href="#presentations" data-page="presentations" class="btn btn-primary btn-large">View All Presentations</a>
+                <a href="#about" data-page="about" class="btn btn-secondary btn-large">About D.I. von Briesen</a>
+              </div>
+            </div>
+          </section>
+        `,
+      };
+
+      // Page titles for different sections
+      const pageTitles = {
+        home: "Camelids & Code - The Awesome Fusion",
+        about: "About D.I. von Briesen - Educational Technology Innovator",
+        presentations: "Presentations & Workshops - D.I. von Briesen",
+        media: "Media & Publications - D.I. von Briesen",
+      };
+
+      // Router functionality
+      let currentPage = "home";
+
+      function loadPage(page) {
+        const content = document.querySelector("main");
+        const navLinks = document.querySelectorAll(".nav-link[data-page]");
+
+        // Update content
+        content.innerHTML = pageContent[page] || pageContent.home;
+
+        // Update navigation active state
+        navLinks.forEach((link) => {
+          link.classList.remove("active");
+          if (link.dataset.page === page) {
+            link.classList.add("active");
+          }
+        });
+
+        // Update page title
+        document.title = pageTitles[page] || pageTitles.home;
+
+        // Update URL hash
+        window.location.hash = page;
+
+        currentPage = page;
+
+        // Reinitialize page-specific functionality
+        initPageFunctionality();
+      }
+
+      function initPageFunctionality() {
+        if (currentPage === "home") {
+          // Initialize home page specific functions
+          window.llamaCount = 0;
+
+          window.addLlama = function () {
+            window.llamaCount++;
+            updateDisplay();
+            if (window.llamaCount === 10) {
+              alert("You've reached peak llama! 🦙🎉");
+            }
+          };
+
+          window.removeLlama = function () {
+            if (window.llamaCount > 0) {
+              window.llamaCount--;
+              updateDisplay();
+            }
+          };
+
+          window.llamaParty = function () {
+            const emojis = ["🦙", "🎉", "✨", "🌟", "💫"];
+            let party = "";
+            for (let i = 0; i < 20; i++) {
+              party += emojis[Math.floor(Math.random() * emojis.length)];
+            }
+            alert(party + " LLAMA PARTY! " + party);
+          };
+
+          function updateDisplay() {
+            const counter = document.getElementById("llamaCount");
+            if (counter) {
+              counter.textContent = window.llamaCount;
+            }
+          }
+        }
+
+        // Scroll to top when changing pages
+        window.scrollTo(0, 0);
+
+        // Reinitialize animations
+        initAnimations();
+      }
+
+      function initAnimations() {
+        const cards = document.querySelectorAll(
+          ".academic-card, .skill-category, .feature, .stat-card",
+        );
+
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                entry.target.style.opacity = "1";
+                entry.target.style.transform = "translateY(0)";
+              }
+            });
+          },
+          { threshold: 0.1 },
+        );
+
+        cards.forEach((el) => {
+          el.style.opacity = "0";
+          el.style.transform = "translateY(30px)";
+          el.style.transition = "all 0.6s ease";
+          observer.observe(el);
+        });
+      }
+
+      // Navigation event handlers
+      document.addEventListener("DOMContentLoaded", () => {
+        // Handle navigation clicks
+        document.addEventListener("click", (e) => {
+          if (e.target.matches("[data-page]")) {
+            e.preventDefault();
+            const page = e.target.dataset.page;
+            console.log("Loading page:", page); // Debug log
+            loadPage(page);
+          }
+        });
+
+        // Handle browser back/forward
+        window.addEventListener("hashchange", () => {
+          const hash = window.location.hash.substring(1);
+          if (pageContent[hash]) {
+            loadPage(hash);
+          }
+        });
+
+        // Load initial page based on hash or default to home
+        const initialPage = window.location.hash.substring(1) || "home";
+        loadPage(pageContent[initialPage] ? initialPage : "home");
+
+        // Mobile navigation
+        const navToggle = document.querySelector(".nav-toggle");
+        const navLinks = document.querySelector(".nav-links");
+
+        if (navToggle && navLinks) {
+          navToggle.addEventListener("click", () => {
+            navToggle.classList.toggle("active");
+            navLinks.classList.toggle("active");
+          });
+
+          // Close mobile menu when clicking on a link
+          document.querySelectorAll(".nav-link").forEach((link) => {
+            link.addEventListener("click", () => {
+              navToggle.classList.remove("active");
+              navLinks.classList.remove("active");
+            });
+          });
+        }
+
+        // Smooth scrolling for anchor links
+        document
+          .querySelectorAll('a[href^="#"]:not([data-page])')
+          .forEach((anchor) => {
+            anchor.addEventListener("click", function (e) {
+              const target = document.querySelector(this.getAttribute("href"));
+              if (target) {
+                e.preventDefault();
+                target.scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                });
+              }
+            });
+          });
+
+        // Header scroll effect
+        window.addEventListener("scroll", () => {
+          const nav = document.querySelector(".main-header");
+          if (nav) {
+            if (window.scrollY > 100) {
+              nav.style.background = "rgba(255,255,255,0.98)";
+              nav.style.boxShadow = "0 2px 20px rgba(0,0,0,0.1)";
+            } else {
+              nav.style.background = "rgba(255,255,255,0.95)";
+              nav.style.boxShadow = "none";
+            }
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

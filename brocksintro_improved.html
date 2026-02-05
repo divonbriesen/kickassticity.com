@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brock L. Packard | Brave Paddlefish</title>
+
+    <style>
+      :root {
+        --uncc-blue: #003366;
+        --uncc-green: #00703c;
+        --light-bg: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        --card-bg: #ffffff;
+        --text-dark: #2c3e50;
+        --accent-gold: #f39c12;
+        --shadow-light: 0 8px 32px rgba(0, 51, 102, 0.1);
+        --shadow-heavy: 0 12px 40px rgba(0, 51, 102, 0.15);
+        --border-radius: 16px;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          "Inter",
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          sans-serif;
+        background: var(--light-bg);
+        color: var(--text-dark);
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        overflow-x: hidden;
+      }
+
+      header {
+        background: linear-gradient(135deg, var(--uncc-blue) 0%, #004080 100%);
+        color: white;
+        text-align: center;
+        padding: 80px 20px 60px;
+        position: relative;
+        overflow: hidden;
+      }
+
+      header::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="racing" patternUnits="userSpaceOnUse" width="20" height="20"><rect width="20" height="20" fill="none"/><path d="M0 20L20 0M-5 5L5 -5M15 25L25 15" stroke="rgba(255,255,255,0.05)" stroke-width="2"/></pattern></defs><rect width="100" height="100" fill="url(%23racing)"/></svg>');
+        opacity: 0.3;
+      }
+
+      header h1 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        margin-bottom: 12px;
+        font-weight: 700;
+        position: relative;
+        z-index: 1;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      header p {
+        font-size: 1.2rem;
+        opacity: 0.9;
+        position: relative;
+        z-index: 1;
+        margin: 8px 0;
+      }
+
+      .container {
+        max-width: 1000px;
+        margin: -30px auto 40px;
+        background: var(--card-bg);
+        padding: 50px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow-heavy);
+        position: relative;
+        z-index: 2;
+      }
+
+      .intro-section {
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+        padding: 30px;
+        border-radius: var(--border-radius);
+        margin-bottom: 40px;
+        border: 1px solid rgba(0, 112, 60, 0.1);
+        position: relative;
+      }
+
+      .intro-section::before {
+        content: "🏁";
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 2rem;
+        opacity: 0.3;
+      }
+
+      .intro-section p {
+        font-size: 1.1rem;
+        margin: 0;
+        color: var(--text-dark);
+      }
+
+      h2 {
+        margin: 50px 0 25px;
+        padding-bottom: 15px;
+        border-bottom: 3px solid var(--uncc-green);
+        font-size: 1.8rem;
+        font-weight: 600;
+        color: var(--uncc-blue);
+        position: relative;
+      }
+
+      h2::after {
+        content: "";
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background: var(--accent-gold);
+        border-radius: 2px;
+      }
+
+      .background-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 25px;
+        margin: 30px 0;
+      }
+
+      .card {
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+        border: 1px solid rgba(0, 112, 60, 0.1);
+        border-left: 5px solid var(--uncc-green);
+        padding: 25px;
+        border-radius: var(--border-radius);
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          var(--uncc-green) 0%,
+          var(--accent-gold) 100%
+        );
+      }
+
+      .card:hover {
+        transform: translateY(-5px);
+        box-shadow: var(--shadow-light);
+        border-left-color: var(--accent-gold);
+      }
+
+      .card strong {
+        color: var(--uncc-blue);
+        display: block;
+        margin-bottom: 8px;
+        font-size: 1.05rem;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 25px 0;
+        border-radius: var(--border-radius);
+        overflow: hidden;
+        box-shadow: var(--shadow-light);
+      }
+
+      th,
+      td {
+        padding: 18px;
+        text-align: left;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      th {
+        background: linear-gradient(135deg, var(--uncc-blue) 0%, #004080 100%);
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 0.9rem;
+      }
+
+      tbody tr:hover {
+        background: rgba(0, 112, 60, 0.05);
+      }
+
+      .highlight {
+        background: linear-gradient(135deg, #fff8dc 0%, #fffacd 100%);
+        color: var(--text-dark);
+        font-weight: 600;
+        font-size: 1.3rem;
+        padding: 25px;
+        border-radius: var(--border-radius);
+        text-align: center;
+        border: 2px solid var(--accent-gold);
+        margin: 30px 0;
+        position: relative;
+      }
+
+      .highlight::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background: linear-gradient(
+          45deg,
+          var(--accent-gold),
+          var(--uncc-green)
+        );
+        border-radius: var(--border-radius);
+        z-index: -1;
+      }
+
+      .quote {
+        background: linear-gradient(135deg, #f0f8ff 0%, #e6f3ff 100%);
+        text-align: center;
+        font-style: italic;
+        margin: 50px 0;
+        padding: 40px;
+        border-radius: var(--border-radius);
+        border: 1px solid rgba(0, 51, 102, 0.1);
+        position: relative;
+      }
+
+      .quote p {
+        font-size: 1.4rem;
+        color: var(--uncc-blue);
+        margin-bottom: 15px;
+        font-weight: 500;
+      }
+
+      .quote span {
+        color: var(--text-dark);
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
+      .quote::before,
+      .quote::after {
+        content: '"';
+        font-size: 4rem;
+        color: var(--uncc-green);
+        opacity: 0.3;
+        position: absolute;
+      }
+
+      .quote::before {
+        top: 10px;
+        left: 20px;
+      }
+
+      .quote::after {
+        bottom: 10px;
+        right: 20px;
+      }
+
+      footer {
+        text-align: center;
+        font-size: 0.9rem;
+        color: #666;
+        margin-top: 50px;
+        padding: 25px;
+        background: #f8f9fa;
+        border-radius: var(--border-radius);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .computer-info {
+        background: linear-gradient(135deg, #f8f9ff 0%, #e8f2ff 100%);
+        padding: 25px;
+        border-radius: var(--border-radius);
+        margin: 25px 0;
+        border-left: 5px solid var(--uncc-blue);
+        position: relative;
+      }
+
+      .computer-info::before {
+        content: "💻";
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        font-size: 1.5rem;
+        opacity: 0.4;
+      }
+
+      @media (max-width: 768px) {
+        .container {
+          margin: -20px 20px 20px;
+          padding: 30px 25px;
+        }
+
+        header {
+          padding: 60px 20px 40px;
+        }
+
+        .background-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .quote p {
+          font-size: 1.2rem;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Brock L. Packard</h1>
+      <p>🏁 Brave Paddlefish</p>
+      <p><em>Michigan International Speedway — 2023</em></p>
+    </header>
+
+    <div class="container">
+      <section class="intro-section">
+        <p>
+          Hello, my name is Brock Packard. I am a Junior in the Communications
+          program here at UNCC. I am a huge racing nerd and love all things
+          NASCAR, IMSA, and general motor racing. I am also part of the esports
+          organization here on campus.
+        </p>
+      </section>
+
+      <h2>📋 Background Information</h2>
+
+      <div class="background-grid">
+        <div class="card">
+          <strong>🏠 Personal Background</strong>
+          <p>
+            Born in Tampa, FL, and part of a military family. I have a lifelong
+            passion for racing and motorsports that drives everything I do.
+          </p>
+        </div>
+
+        <div class="card">
+          <strong>🏆 Professional Background</strong>
+          <p>
+            NASCAR engineer for four seasons across three different teams,
+            ranging from Cup to Truck series. Also manage the iRacing team for
+            CLT Esports on campus.
+          </p>
+        </div>
+
+        <div class="card">
+          <strong>🎓 Academic Background</strong>
+          <p>
+            Communications major with Math minor at UNCC since Fall 2021.
+            Currently a Junior focused on combining technical skills with
+            communication expertise.
+          </p>
+        </div>
+      </div>
+
+      <h2>💻 Technology Setup</h2>
+      <div class="computer-info">
+        <p>
+          <strong>Primary Computer:</strong> Apple MacBook Pro Laptop (home
+          setup)
+        </p>
+        <p>
+          Optimized for engineering software, data analysis, and race strategy
+          development.
+        </p>
+      </div>
+
+      <h2>📚 Current Courses & Objectives</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Course Code & Title</th>
+            <th>Strategic Reasoning</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <strong>ACCT 2121</strong><br />
+              <span style="color: #666">Principles of Accounting</span>
+            </td>
+            <td>
+              Financial literacy is crucial in motorsports business operations
+              and team budget management.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>INFO 2130</strong><br />
+              <span style="color: #666">Intro to Business Computing</span>
+            </td>
+            <td>
+              Technology integration is essential for modern racing analytics
+              and team communication systems.
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <strong>ITSC 1110</strong><br />
+              <span style="color: #666">Intro to CS Principles</span>
+            </td>
+            <td>
+              Understanding computational thinking enhances race strategy
+              development and data analysis capabilities.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>🎯 Career Achievement</h2>
+      <div class="highlight">
+        🏆 2023 Xfinity Series Talladega Winning Engineer
+      </div>
+
+      <div class="quote">
+        <p>Do what you got to do so you can do what you wanna do.</p>
+        <span>— Shawn Packard</span>
+      </div>
+
+      <footer>
+        <p>
+          <strong>Privacy Acknowledgment:</strong> I understand that this
+          content is publicly accessible and have only included information I'm
+          comfortable sharing.
+        </p>
+        <p><em>— Brock L. Packard (01/13/2026)</em></p>
+      </footer>
+    </div>
+  </body>
+</html>
